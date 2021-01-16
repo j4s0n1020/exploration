@@ -40,6 +40,7 @@ const Inspiration = ({
           {inspirationTrips &&
             inspirationTrips.map((trip) => (
               <Box
+                key={trip.id}
                 boxSize='m'
                 textAlign="center"
                 border='1px solid silver'
@@ -52,7 +53,6 @@ const Inspiration = ({
                 <GridItem colSpan={1} justify='center' m={2} bg="cyan.50" rounded="5%">
                   <ProfileTrip
                     justify='center'
-                    key={trip.id}
                     tripId={trip.id}
                     title={trip.title}
                     destination={trip.destination}
@@ -65,7 +65,6 @@ const Inspiration = ({
                     handleFavorite={handleFavorite}
                   />
                   <InspirationHeart
-                    key={trip.id}
                     tripId={trip.id}
                     title={trip.title}
                     destination={trip.destination}

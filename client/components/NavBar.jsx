@@ -47,9 +47,9 @@ export default function NavBar() {
       });
   };
 
-  const userid = 1;
   const goToProfile = () => {
-    history.push(`/time/profile/${userid}`);
+    console.log('AUTH',auth.user)
+    history.push(`/time/profile/${auth.user.Id}`);
   };
 
   return (
