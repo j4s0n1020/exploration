@@ -49,7 +49,7 @@ export default function NavBar() {
 
   const goToProfile = () => {
     console.log('AUTH',auth.user)
-    history.push(`/time/profile/${auth.user.Id}`);
+    history.push(`/time/profile/${auth.user.userId}`);
   };
 
   return (
