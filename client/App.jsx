@@ -117,7 +117,7 @@ class App extends Component {
           // console.log('AFTER MAPPING FAV', inspirationTrips)
         }
         this.setState({
-          trips,
+          trips : trips|| [],
           savedTrips,
           pastTrips,
           inspirationTrips,
