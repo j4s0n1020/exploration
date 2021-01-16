@@ -2,25 +2,13 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
 	createStandaloneToast,
-	useDisclosure,
-	Drawer,
-	DrawerBody,
-	DrawerHeader,
-	DrawterOverlay,
-	DrawerContent,
-	DrawerCloseButton,
+	
 	Flex,
 	Button,
-	FormControl,
-	Image,
-	Text,
-	Box,
+
 	Grid,
 	GridItem,
-	VStack,
-	StackDivider,
-	Container,
-	Heading,
+	
 } from '@chakra-ui/react';
 import TripPlanned from '../../components/tripComponent';
 

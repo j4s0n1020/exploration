@@ -7,7 +7,7 @@ import TripListContainer from './TripList';
 
 class TimeHomePage extends Component {
 	componentDidMount() {
-		console.log(this.props);
+		console.log("TIMEHOMEPAGE THIS.PROPS:", this.props);
 		this.props.handleFetchState();
 	}
 
@@ -113,6 +113,7 @@ class TimeHomePage extends Component {
 	};
 
 	render() {
+		console.log("render from homepage, this.props.trips",this.props.trips)
 		return (
 			<>
 				<NavBar />

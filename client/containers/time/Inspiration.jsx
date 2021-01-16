@@ -5,15 +5,10 @@ import ProfileTrip from '../../components/profile/ProfileTrip';
 
 import {
   Box,
-  Button,
-  Text,
-  Image,
+
   Grid,
   GridItem,
-  Link,
-  Badge,
-  Center,
-  Flex,
+
 } from '@chakra-ui/react';
 import InspirationHeart from '../../components/InspirationHeart';
 
@@ -40,8 +35,9 @@ const Inspiration = ({
           {inspirationTrips &&
             inspirationTrips.map((trip) => (
               <Box
+                key={trip.id}
                 boxSize='m'
-                textAlign="center"
+                textAlign='center'
                 border='1px solid silver'
                 mt='40px'
                 mb='40px'
@@ -49,10 +45,15 @@ const Inspiration = ({
                 // py='40px'
                 rounded='5%'
               >
-                <GridItem colSpan={1} justify='center' m={2} bg="cyan.50" rounded="5%">
+                <GridItem
+                  colSpan={1}
+                  justify='center'
+                  m={2}
+                  bg='cyan.50'
+                  rounded='5%'
+                >
                   <ProfileTrip
                     justify='center'
-                    key={trip.id}
                     tripId={trip.id}
                     title={trip.title}
                     destination={trip.destination}
@@ -65,7 +66,6 @@ const Inspiration = ({
                     handleFavorite={handleFavorite}
                   />
                   <InspirationHeart
-                    key={trip.id}
                     tripId={trip.id}
                     title={trip.title}
                     destination={trip.destination}

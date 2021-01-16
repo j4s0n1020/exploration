@@ -5,28 +5,23 @@ import React, { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 
 import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+ 
   Box,
-  Image,
+ 
   Button,
   Text,
   Grid,
   GridItem,
   Icon,
 } from '@chakra-ui/react';
-
-// import { RiAddCircleFill } from 'react-icons/ri';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+ 
 
 import { MdAirplanemodeActive, MdHome } from 'react-icons/md';
 import { FaUser } from 'react-icons/fa'
-// import { IconContext } from 'react-icons';
+
 import { useAuth } from '../useAuth';
 
-// stateless functional component
+
 
 export default function NavBar() {
   const auth = useAuth();
@@ -47,9 +42,9 @@ export default function NavBar() {
       });
   };
 
-  const userid = 1;
+   
   const goToProfile = () => {
-    history.push(`/time/profile/${userid}`);
+    history.push(`/time/profile/${auth.user.Id}`);
   };
 
   return (

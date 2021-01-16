@@ -6,16 +6,10 @@ import ProfileTrip from '../../components/profile/ProfileTrip';
 
 import {
   Box,
-  Button,
-  Text,
-  Image,
-  Grid,
-  GridItem,
-  Link,
-  Badge,
+  
   Center,
   Flex,
-  Spacer,
+ 
   HStack
 } from '@chakra-ui/react';
 
