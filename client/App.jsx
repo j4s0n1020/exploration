@@ -191,6 +191,7 @@ class App extends Component {
           <PrivateRoute
             path='/time/inspiration'
             component={Inspiration}
+            trips={this.state.trips}
             inspirationTrips={this.state.inspirationTrips}
             savedTrips={this.state.savedTrips}
             handleFetchState={this.handleFetchState}

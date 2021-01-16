@@ -29,13 +29,7 @@ const Activity = (props) => {
 
 	return (
 		<>
-			<Box
-				m={2}
-				maxW="sm"
-				borderWidth="1px"
-				borderRadius="lg"
-				overflow="hidden"
-			>
+			<Box borderWidth="1px" borderRadius="lg" overflow="hidden">
 				<Center padding={5}>
 					<Image
 						src={image_url}
@@ -89,6 +83,7 @@ const Activity = (props) => {
 										review_count,
 										rating
 									);
+									props.toggle();
 									props.onClose();
 								}}
 								colorScheme="blue"

@@ -93,6 +93,7 @@ memberController.validateMember = async (req, res, next) => {
 
 memberController.updateMember = async (req, res, next) => {
   const member_id = req.session.passport.user;
+  // const member_id = 1;
 
   const { saved_trips } = req.body;
 

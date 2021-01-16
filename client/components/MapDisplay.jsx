@@ -7,7 +7,7 @@ import {
 	Marker,
 } from 'react-google-maps';
 import { useControllableState } from '@chakra-ui/react';
-// import mapStyles from './mapStyles';
+import mapStyles from './mapStyles';
 
 const MapDisplay = ({ lat, lng, trip }) => {
 	// const firstRender = useRef(true);
@@ -33,8 +33,8 @@ const MapDisplay = ({ lat, lng, trip }) => {
 				});
 			}}
 			// icon={{
-			// 	// url: '../assets/images-2.png',
-			// 	scaledSize: new window.google.maps.Size(40, 40),
+			// 	url: '../assets/images-2.png',
+			// 	scaledSize: new window.google.maps.Size(40, 40)
 			// // }}
 		/>
 	));
@@ -64,10 +64,10 @@ const MapDisplay = ({ lat, lng, trip }) => {
 	return (
 		<>
 			<GoogleMap
-				defaultZoom={11.5}
+				defaultZoom={12.75}
 				//if there is a value in our center state, use that, if not, use default
 				defaultCenter={{ lat: lat, lng: lng }}
-				//defaultOptions={{ styles: mapStyles }}
+				defaultOptions={{ styles: mapStyles }}
 			>
 				{DisplayActivities}
 				{/* {displaySearch} */}
