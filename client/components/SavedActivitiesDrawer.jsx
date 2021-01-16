@@ -57,7 +57,7 @@ const SavedActivitiesDrawer = ({ deleteActivityHandler, trip }) => {
 							Your Activities
 						</DrawerHeader>
 						<DrawerBody>
-							<Grid templateColumns="repeat(4, 1fr)" m={30} padding={2} gap={6}>
+							<Grid templateColumns="repeat(2, 1fr)" m={30} padding={2} gap={6}>
 								{trip.activities.map((activity) => (
 									<SavedActivities
 										deleteActivityHandler={deleteActivityHandler}

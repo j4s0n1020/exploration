@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ActivitySearch from './ActivitySearch';
 import ActivityList from '../containers/time/Activities/ActivityList';
 import {
@@ -27,6 +27,7 @@ const FindActivitiesDrawer = ({
 	trip,
 	handleSearchedActivities,
 	addActivityHandler,
+	firstToggle,
 }) => {
 	//[inputOrSelect, setSearch] = [];
 
@@ -34,6 +35,8 @@ const FindActivitiesDrawer = ({
 	const btnRef = React.useRef();
 
 	const [searchResults, setSearchResults] = useState([]);
+
+	const toggle = () => setSearchResults([]);
 
 	const findActivities = (destination, category) => {
 		fetch('/api/yelp/', {
@@ -129,12 +132,13 @@ const FindActivitiesDrawer = ({
 								findActivitiesByTerm={findActivitiesByTerm}
 								findActivities={findActivities}
 							/>
-							<GridItem colSpan={3}>
+							<GridItem colSpan={2}>
 								{searchResults && (
 									<ActivityList
 										onClose={onClose}
 										addActivityHandler={addActivityHandler}
 										searchResults={searchResults}
+										toggle={toggle}
 									/>
 								)}
 							</GridItem>
