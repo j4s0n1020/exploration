@@ -31,7 +31,8 @@ export default function NavBar() {
   };
 
   const goToProfile = () => {
-    history.push(`/time/profile/${auth.user.Id}`);
+    console.log(auth.user)
+    history.push(`/time/profile/${auth.user.userId}`);
   };
 
   const goToHomePage = () => {

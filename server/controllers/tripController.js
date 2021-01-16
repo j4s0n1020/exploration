@@ -80,7 +80,7 @@ tripController.getTrips = async (req, res, next) => {
   } else {
     query = 'SELECT * FROM trip WHERE member_id = $1';
   }
-
+//SELECT DISTINCT on (trip.id) trip.id, trip.title, member_id, member.username FROM trip JOIN member ON member_id <> 1
   try {
     const trips = await Pool.query(query, [member_id]);
 

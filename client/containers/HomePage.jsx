@@ -28,7 +28,7 @@ const HomePage = () => {
         py={10}
         pb={40}
       >
-        <Container bg="gray.700" opacity='.8' borderRadius='25px'>
+        <Container bg="rgba(0, 0, 0,.7)" borderRadius='25px'>
         <Stack spacing={8}>
           <Box pb={10} opacity='1'>
             <Text fontSize="4xl" m={2} color="gray.50" textAlign="center">
