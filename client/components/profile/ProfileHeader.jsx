@@ -30,7 +30,7 @@ const ProfileHeader = ({currentTab, setCurrentTab, menuItems}) => {
           {menuItems.map((el, index) => {
             return (
               <GridItem colSpan={1} m={2} key={el + index}>
-                <Button colorScheme='teal' variant='outline' onClick={() => setCurrentTab(el)}>
+                <Button colorScheme={currentTab === el ? 'teal' : 'gray' } onClick={() => setCurrentTab(el)}>
                   <Text fontSize={{ base: '0px', md: '18px', lg: '20px' }}>
                     {el}
                   </Text>

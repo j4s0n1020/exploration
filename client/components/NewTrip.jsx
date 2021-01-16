@@ -175,8 +175,8 @@ const NewTripDrawer = (props) => {
 									>
 										<option value="day">Down to the day</option>
 										<option value="month">Know the month(s)!</option>
-										<option value="year">Just the year</option>
-										<option value="none">No dates planned yet!</option>
+										{/* <option value="year">Just the year</option>
+										<option value="none">No dates planned yet!</option> */}
 									</Select>
 								</Stack>
 								{datesKnown !== 'none' && (

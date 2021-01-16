@@ -25,18 +25,20 @@ const Profile = ({ trips, handleFetchState, savedTrips, pastTrips }) => {
     <>
       <NavBar />
       <Box>
-        <ProfileHeader
-          currentTab={currentTab}
-          setCurrentTab={setCurrentTab}
-          menuItems={Object.keys(profileTabs)}
-        />
+        <Flex justify='center'>
+          <ProfileHeader
+            currentTab={currentTab}
+            setCurrentTab={setCurrentTab}
+            menuItems={Object.keys(profileTabs)}
+          />
+        </Flex>
         <>
           <Center>
             {' '}
             <HStack spacing='20px'>
               {profileTabs[currentTab] &&
                 profileTabs[currentTab].map((trip) => (
-                  <Flex>
+                  <Flex justify='center'>
                     <ProfileTrip
                       title={trip.title}
                       destination={trip.destination}
