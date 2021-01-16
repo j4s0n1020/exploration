@@ -113,6 +113,7 @@ class TimeHomePage extends Component {
 	};
 
 	render() {
+		console.log("render from homepage, this.props.trips",this.props.trips)
 		return (
 			<>
 				<NavBar />

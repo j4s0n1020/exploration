@@ -94,6 +94,7 @@ class App extends Component {
 
   handleFetchState = (whichTrips) => {
     // whichTrips: upcoming/past/inspiration/all
+    console.log('calling FETCH', "WHICH TRIPS IS:", whichTrips)
     fetch(`/api/trips/?type=${whichTrips}`) // `api/trips/?=${condition}`  // api/trips/?=all
       .then((response) => response.json())
       .then((result) => {
@@ -116,7 +117,7 @@ class App extends Component {
           // console.log('AFTER MAPPING FAV', inspirationTrips)
         }
         this.setState({
-          trips,
+          trips : trips|| [],
           savedTrips,
           pastTrips,
           inspirationTrips,
